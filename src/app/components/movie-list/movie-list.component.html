@@ -1,4 +1,11 @@
-<p>Title: {{ movies[0].Title }}</p>
-<p>Year: {{ movies[0].Year }}</p>
-<img [src]="movies[0].Poster" [alt]="movies[0].Tittle">
-
+<div class="row">
+  <div class="card col-md-4 col-sm-6 col-xs-12" *ngFor="let m of movies">
+   <div class="alert alert-primary">
+    <div class="card-body">
+      <h5 class="card-title">{{ m.Title }}</h5>
+      <p>{{ m.Year }}</p>
+      <img [src]="m.Poster" [alt]="m.Tittle" class="card-img-top">
+    </div>
+   </div>
+  </div>
+</div>
